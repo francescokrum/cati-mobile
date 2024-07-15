@@ -32,7 +32,7 @@ class _CadastroUsuarioState extends State<CadastroUsuario> {
         backgroundColor: Colors.purple,
       ),
       body: Padding(
-        padding: const EdgeInsets.only(top: 100, left: 16, right: 16),
+        padding: const EdgeInsets.only(top: 20, left: 16, right: 16),
         child: SingleChildScrollView(
           child: Form(
             key: _formKey,
@@ -154,11 +154,11 @@ class _CadastroUsuarioState extends State<CadastroUsuario> {
                         email: email,
                         login: login,
                         senha: senha,
-                        cnpjEmpresa: cnpjEmpresa,
+                        cnpj_unidade: cnpjEmpresa,
                       );
 
                       // Adicionar o usuário à lista usando UsuarioDAO
-                      UsuarioDAO.adicionar(usuario);
+                      UsuarioDAO.cadastrarCliente(usuario);
 
                       // Mostrar mensagem de sucesso
                       ScaffoldMessenger.of(context).showSnackBar(
